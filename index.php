@@ -38,13 +38,13 @@ mysqli_close($conn);
             <div class="card-content center">
                 <h6><?php echo htmlspecialchars($pizza['title']); ?></h6>
                 <ul>
-                    <?php foreach(explode(',', $pizzas[0]['ingredients']) as $ing) { ?>
+                    <?php foreach(explode(',', $pizza['ingredients']) as $ing) { ?>
                         <li><?php echo htmlspecialchars($ing); ?></li>
                     <?php } ?>
                 </ul>
             </div>
             <div class="card-action right-align">
-                <a href="#" class="brand-text">more info</a>
+                <a href="details.php?id=<?php echo $pizza['id'] ?>" class="brand-text">more info</a>
             </div>
         </div>
      </div>           
